@@ -10,12 +10,15 @@ const navLinkStyles = ({ isActive }) => {
 
 function Navbar() {
   return (
-    <nav>
+    <nav className="primary">
       <NavLink style={navLinkStyles} to="/">
         Home
       </NavLink>
       <NavLink style={navLinkStyles} to="/about">
         About
+      </NavLink>
+      <NavLink style={navLinkStyles} to="/product">
+        Product
       </NavLink>
     </nav>
   );
