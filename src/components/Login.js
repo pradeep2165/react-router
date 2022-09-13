@@ -1,15 +1,18 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "./Auth";
 
 function Login() {
   const [user, setUser] = useState("");
   const auth = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const redirectPath = location.state?.path || "/";
 
   const handelLogin = () => {
     auth.login(user);
-    navigate("/", { replace: true });
+    navigate(redirectPath, { replace: true });
   };
   return (
     <div>
