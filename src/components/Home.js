@@ -6,7 +6,8 @@ function Home() {
   return (
     <>
       <div>Home page</div>
-      <button onClick={() => navigate("orderSummary")}>Place order</button>
+
+      <button onClick={() => navigate("orderSummary", { replace: true })}>Place order</button>
     </>
   );
 }
