@@ -21,3 +21,7 @@ nav{
 nav a{
   margin-right: 16px;
 }
+nav a.active{
+  font-weight: bold;
+  text-decoration: none;
+}
