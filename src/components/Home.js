@@ -1,7 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
-  return <div>Home page</div>;
+  const navigate = useNavigate();
+  return (
+    <>
+      <div>Home page</div>
+      <button onClick={() => navigate("orderSummary")}>Place order</button>
+    </>
+  );
 }
 
 export default Home;
